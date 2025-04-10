@@ -1,0 +1,82 @@
+---
+title: 图片缩放功能示例
+description: 学习如何使用starlight-image-zoom插件
+---
+
+# 图片缩放功能示例
+
+使用 `starlight-image-zoom` 插件，您可以在文档中添加可缩放的图片。当用户点击图片时，它会放大显示，提供更好的查看体验。
+
+## 基本用法
+
+以下是一些图片示例。点击图片可以查看缩放效果：
+
+![Astro Logo](https://imgfile-sbo.pages.dev/img/%E9%98%BF%E5%B0%94%E6%89%98%E8%8E%89%E9%9B%85%C2%B7%E5%8D%A1%E6%96%AF%E7%89%B9_2022%E6%81%AD%E8%B4%BA%E6%96%B0%E5%B9%B4.png)
+
+您可以使用标准的Markdown语法添加图片，无需额外的配置。
+
+## 多张图片示例
+
+您可以在页面中添加多张图片，它们都具有缩放功能：
+
+![Astro Logo 1](https://docs.astro.build/logos/icon.svg)
+![Astro Logo 2](https://docs.astro.build/logos/full.svg)
+![Starlight Logo](https://starlight.astro.build/social-card.png)
+
+## 不同大小的图片
+
+无论图片的原始大小如何，图片缩放功能都能正常工作：
+
+小图片：
+
+![Small Image](https://docs.astro.build/logos/icon.svg)
+
+大图片：
+
+![Large Image](https://starlight.astro.build/social-card.png)
+
+## 结合Steps组件使用
+
+您也可以在Steps组件中使用可缩放的图片：
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+1. 安装图片缩放插件
+   ```bash
+   npm install starlight-image-zoom
+   ```
+
+2. 在配置文件中启用插件
+   ```js
+   // astro.config.mjs
+   import starlightImageZoom from 'starlight-image-zoom';
+   
+   export default defineConfig({
+     integrations: [
+       starlight({
+         // ...其他配置
+         customCss: [
+           './node_modules/starlight-image-zoom/style.css',
+         ],
+         plugins: [
+           starlightImageZoom(),
+         ],
+       }),
+     ],
+   });
+   ```
+
+3. 在文档中添加图片
+   ![Example Image](https://imgfile-sbo.pages.dev/img/%E9%98%BF%E5%B0%94%E6%89%98%E8%8E%89%E9%9B%85%C2%B7%E5%8D%A1%E6%96%AF%E7%89%B9_2022%E6%81%AD%E8%B4%BA%E6%96%B0%E5%B9%B4.png)
+</Steps>
+
+## Nova主题与图片缩放
+
+Nova主题和图片缩放插件完美配合，提供现代化的文档视觉体验。
+
+## 注意事项
+
+- 图片缩放功能适用于所有使用标准Markdown语法添加的图片
+- 用户可以通过点击图片外部区域或按ESC键关闭缩放视图
+- 移动设备上同样支持图片缩放功能 

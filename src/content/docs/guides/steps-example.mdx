@@ -1,0 +1,93 @@
+---
+title: Steps组件使用示例
+description: 学习如何在文档中使用Steps组件
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+# Steps组件使用示例
+
+Steps组件是Starlight提供的一个非常有用的组件，用于创建有序的步骤指南。
+
+## 基本用法
+
+<Steps>
+1. 第一步：创建一个新的Astro项目
+   ```bash
+   npm create astro@latest
+   ```
+
+2. 第二步：添加Starlight集成
+   ```bash
+   npm install @astrojs/starlight
+   ```
+
+3. 第三步：配置Starlight
+   ```js
+   // astro.config.mjs
+   import { defineConfig } from 'astro/config';
+   import starlight from '@astrojs/starlight';
+
+   export default defineConfig({
+     integrations: [
+       starlight({
+         title: '我的文档',
+       }),
+     ],
+   });
+   ```
+
+4. 第四步：启动开发服务器
+   ```bash
+   npm run dev
+   ```
+</Steps>
+
+## 嵌套步骤
+
+您还可以在Steps组件中嵌套内容：
+
+<Steps>
+1. 准备环境
+   - 安装Node.js最新LTS版本
+   - 确保npm已更新到最新版本
+   - 创建一个新的项目文件夹
+
+2. 初始化项目
+   <Steps>
+   1. 创建package.json
+      ```bash
+      npm init -y
+      ```
+   
+   2. 安装依赖
+      ```bash
+      npm install astro @astrojs/starlight
+      ```
+   </Steps>
+
+3. 开始开发
+</Steps>
+
+## MDX与Steps组合使用
+
+在MDX文件中，您可以结合其他内容与Steps：
+
+<Steps>
+1. 导入必要的组件
+   ```jsx
+   import { Steps } from '@astrojs/starlight/components';
+   ```
+
+2. 在步骤中使用代码块
+   ```js
+   console.log('这是一个代码示例');
+   ```
+
+3. 在步骤中添加图片或表格
+   | 特性 | 描述 |
+   |------|------|
+   | 简单 | Steps组件易于使用 |
+   | 灵活 | 支持各种内容嵌套 |
+   | 美观 | 自动生成数字和连接线 |
+</Steps> 

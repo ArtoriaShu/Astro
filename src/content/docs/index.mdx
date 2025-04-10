@@ -1,0 +1,51 @@
+---
+title: 交易日记
+description: 记录交易心得和实验
+template: splash
+hero:
+  tagline: 记录交易学习和实验的历程
+  actions:
+    - text: 开始探索
+      link: /intro/
+      icon: right-arrow
+      variant: primary
+    - text: 查看交易机会
+      link: /chance/week-1/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 主要内容
+
+<CardGrid stagger>
+	<Card title="交易理念" icon="pencil">
+		记录个人的交易哲学和心得体会，提供指导方向。
+	</Card>
+	<Card title="交易机会" icon="add-document">
+		总结每周发现的交易机会，分析走势和结果。
+	</Card>
+	<Card title="实验计划" icon="setting">
+		记录账户实验的具体情况和进展。
+	</Card>
+	<Card title="复利力量" icon="open-book">
+		探索复利交易的潜力和实现方法。
+	</Card>
+</CardGrid>
+
+## 最新内容
+
+<CardGrid>
+  <Card title="交易理念" icon="pencil">
+    [序 - 人生如棋，落子无悔](/intro/)
+  </Card>
+  <Card title="交易机会" icon="add-document">
+    [第1周 - 交易机会](/chance/week-1/)
+  </Card>
+  <Card title="交易机会" icon="add-document">
+    [第2周 - 交易机会](/chance/week-2/)
+  </Card>
+  <Card title="实验计划" icon="setting">
+    [第1周 - 实验计划](/plan/week-1/)
+  </Card>
+</CardGrid>
