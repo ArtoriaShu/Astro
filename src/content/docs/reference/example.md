@@ -1,6 +1,7 @@
 ---
 title: Example Reference
 description: A reference page in my new Starlight docs site.
+lastModified: "2025-04-11T01:27:49+08:00"
 ---
 
 Reference pages are ideal for outlining how things work in terse and clear terms.
