@@ -13,6 +13,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: '交易日记',
+			lastUpdated: true,
 			// 移除国际化配置，只使用默认语言
 			plugins: [
 				// 启用图片缩放功能
@@ -23,10 +24,6 @@ export default defineConfig({
 			customCss: [
 				// 自定义样式路径
 			],
-			components: {
-				// 自定义布局组件
-				Footer: './src/layouts/CustomLayout.astro',
-			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
