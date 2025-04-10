@@ -1,0 +1,22 @@
+---
+import LastUpdated from '../components/LastUpdated.astro';
+const { entry } = Astro.props;
+---
+
+<footer>
+  <div class="content">
+    <LastUpdated lastModified={entry.data.lastModified} />
+    <slot />
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .content {
+    margin: 0 auto;
+    max-width: 100ch;
+  }
+</style> 

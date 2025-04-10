@@ -3,9 +3,13 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeNova from 'starlight-theme-nova';
 import starlightImageZoom from 'starlight-image-zoom';
+import { remarkModifiedTime } from './remark-modified-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
+	markdown: {
+		remarkPlugins: [remarkModifiedTime],
+	},
 	integrations: [
 		starlight({
 			title: '交易日记',
@@ -16,6 +20,13 @@ export default defineConfig({
 				// 启用Nova主题
 				starlightThemeNova(),
 			],
+			customCss: [
+				// 自定义样式路径
+			],
+			components: {
+				// 自定义布局组件
+				Footer: './src/layouts/CustomLayout.astro',
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{

@@ -1,0 +1,25 @@
+---
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+import utc from 'dayjs/plugin/utc';
+
+dayjs.extend(utc);
+dayjs.locale('zh-cn');
+
+const { lastModified } = Astro.props;
+const formattedDate = lastModified 
+  ? dayjs(lastModified).format('YYYY年MM月DD日 HH:mm:ss') 
+  : '未知';
+---
+
+<div class="last-updated">
+  <p>最后更新时间: {formattedDate}</p>
+</div>
+
+<style>
+  .last-updated {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--sl-color-gray-3);
+  }
+</style> 
