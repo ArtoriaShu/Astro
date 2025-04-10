@@ -24,6 +24,10 @@ export default defineConfig({
 			customCss: [
 				// 自定义样式路径
 			],
+			components: {
+				// 使用自定义的LastUpdated组件
+				LastUpdated: './src/components/LastUpdated.astro',
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
